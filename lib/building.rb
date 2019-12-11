@@ -10,11 +10,11 @@ attr_reader :units
   end
 
   def average_rent
-    sum = monthly_rent.sum
+    @monthly_rent.to_a.sum
 
-  total = monthly_rent.count
+    total = @monthly_rent.to_a.count
 
-  average = (monthly_rent.to_f / total).round(1)
+    @monthly_rent.to_f / total.round(1)
 
   end
 end
